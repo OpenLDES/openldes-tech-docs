@@ -7,7 +7,7 @@ nav_order: 1
 
 # Ldes Client Connector
 
-<b>LDIO connector name:</b> <i>`Ldio:LdioLdesClientConnector`</i> see [reference guide](https://informatievlaanderen.github.io/VSDS-Linked-Data-Interactions/ldio/ldio-inputs/ldio-ldes-client-connector) <br>
+<b>LDIO connector name:</b> <i>`Ldio:LdioLdesClientConnector`</i> see [reference guide](https://openldes.github.io/Linked-Data-Interactions/ldio/ldio-inputs/ldio-ldes-client-connector) <br>
 <b>Apache Nifi Component Name:</b> <i>Ldio:LdioLdesClientConnector`</i> see [reference guide]()
 
 <br>

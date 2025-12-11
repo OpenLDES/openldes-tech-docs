@@ -6,26 +6,26 @@ sort: 11
 
 # Release management
 
-## LDES Server [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Informatievlaanderen_VSDS-LDESServer4J&metric=alert_status&?style=social)](https://sonarcloud.io/summary/new_code?id=Informatievlaanderen_VSDS-LDESServer4J)
+## LDES Server [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Informatievlaanderen_VSDS-LDESServer&metric=alert_status&?style=social)](https://sonarcloud.io/summary/new_code?id=Informatievlaanderen_VSDS-LDESServer)
 
 ### Versions: 
 
 * Latest Official version: [![Docker Image Version](https://img.shields.io/docker/v/ldes/ldes-server/latest)](https://hub.docker.com/r/ldes/ldes-server/tags)
 * Latest Alpha version: [![Docker Image Version](https://img.shields.io/docker/v/ldes/ldes-server)](https://hub.docker.com/r/ldes/ldes-server/tags)
 
-Go to the [LDES Server Github Releases](https://github.com/Informatievlaanderen/VSDS-LDESServer4J/releases/) for all the releases.
+Go to the [LDES Server Github Releases](https://github.com/OpenLDES/VSDS-LDESServer/releases/) for all the releases.
 
 ## Linked Data Interactions [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Informatievlaanderen_VSDS-Linked-Data-Interactions&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Informatievlaanderen_VSDS-Linked-Data-Interactions)
 
 The Linked Data Interactions Repo (LDI) is a bundle of basic SDKs used to receive, generate, transform and output Linked Data. This project is set up in the context of the VSDS Project to ease adopting LDES on data consumer and producer side.
 
-Go to the [LDI Github Releases](https://github.com/Informatievlaanderen/VSDS-Linked-Data-Interactions/releases/) for all the releases.
+Go to the [LDI Github Releases](https://github.com/OpenLDES/VSDS-Linked-Data-Interactions/releases/) for all the releases.
 
 ### Linked Data Interactions Orchestrator (LDIO) 
 
 The Linked Data Interactions Orchestrator is built to be a lightweight Linked Data pipeline framework.
 
-For more detail on how to use the LDIO, please visit the [LDIO Documentation](https://informatievlaanderen.github.io/VSDS-Linked-Data-Interactions/ldio).
+For more detail on how to use the LDIO, please visit the [LDIO Documentation](https://openldes.github.io/Linked-Data-Interactions/ldio).
 
 #### Versions:
 
@@ -37,7 +37,7 @@ For more detail on how to use the LDIO, please visit the [LDIO Documentation](ht
 To also support existing users of Apache NiFi, all LDI components have been made available as NiFi component.
 For that, a specially bundled NiFi Docker image is available.
 
-Documentation on how to use the individual Processors can be found in the in-app documentation and on [the LDI NiFi docs](https://informatievlaanderen.github.io/VSDS-Linked-Data-Interactions/ldi-nifi).
+Documentation on how to use the individual Processors can be found in the in-app documentation and on [the LDI NiFi docs](https://openldes.github.io/Linked-Data-Interactions/ldi-nifi).
 
 #### Versions:
 

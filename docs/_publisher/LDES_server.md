@@ -9,16 +9,16 @@ nav_order: 5
 <b>LDIO Pipeline</b> <i></i> see [reference guide]() <br>
 <b>Apache Nifi Component Name:</b> <i>``</i> see [Apache Nifi reference guide]()
 
-The Linked Data Event Stream (LDES) [server](https://github.com/Informatievlaanderen/VSDS-LDESServer4J) is a configurable component that can be used to ingest, store, and (re-)publish one or multiple Linked Data Event Stream(s). The open-source LDES server is built in the context of the [VSDS project](https://www.vlaanderen.be/vlaamse-smart-data-space-portaal) to exchange (Open) Data easily.
+The Linked Data Event Stream (LDES) [server](https://github.com/OpenLDES/VSDS-LDESServer) is a configurable component that can be used to ingest, store, and (re-)publish one or multiple Linked Data Event Stream(s). The open-source LDES server is built in the context of the [VSDS project](https://www.vlaanderen.be/vlaamse-smart-data-space-portaal) to exchange (Open) Data easily.
 
-<p align="center"><img src="https://informatievlaanderen.github.io/VSDS-Tech-Docs/assets/images/LDES%20server.png" width="60%" text-align="center"></p>
+<p align="center"><img src="https://openldes.org/assets/assets/images/LDES%20server.png" width="60%" text-align="center"></p>
 
 The server can be configured to meet the organisation's specific needs. Functionalities include **retention policy**, **fragmentation**, **deletion**, **create a snapshot** and **pagination** for managing and processing large amounts of data more efficiently and ensuring the efficient use of storage.
 
 ![](../images/scalableApplications.png)
 
 {: .note}
-The LDES server is available as on open-source building block on [GitHub](https://github.com/Informatievlaanderen/VSDS-LDESServer4J)
+The LDES server is available as on open-source building block on [GitHub](https://github.com/OpenLDES/VSDS-LDESServer)
 
 ## Setting up the LDES Server during startup process
 
@@ -28,7 +28,7 @@ The LDES server is able to receive data via HTTP ingestion. Specifically, the se
 
 Once the objects in the dataset are LDES-compliant members (whether or not after conversion to a version object) and the LDES member has been added to the LDES server, the server can effortlessly publish the LDES member as part of the LDES.
 
-More information on the HTTP ingestion can be found [here](https://informatievlaanderen.github.io/VSDS-LDESServer4J/ingest/http).
+More information on the HTTP ingestion can be found [here](https://openldes.github.io/LDESServer/ingest/http).
 
 Example HTTP Ingest-Fetch Configuration:
 
@@ -78,13 +78,13 @@ SHACL stands for Shapes Constraint Language and is used to define a set of const
 
 The SHACL shape specifies the expected properties of an LDES members and the constraints that must be followed to ensure the LDES member adheres to the expected structure and semantics. It defines properties such as required properties, allowed property values, and the data types expected for the properties.
 
-More information on how to provide an RDF file, containing a SHACL shape, to the LDES server can be found [here](https://github.com/Informatievlaanderen/VSDS-LDESServer4J#example-serving-static-content).
+More information on how to provide an RDF file, containing a SHACL shape, to the LDES server can be found [here](https://github.com/OpenLDES/VSDS-LDESServer#example-serving-static-content).
 
 ### Fragmentation
 
 To reduce the volume of data that consumers need to replicate or to speed up certain queries, the LDES server can be configured to create several fragmentations. Fragmentations are similar to indexes in databases but then published on the Web. The RDF predicate on which the fragmentation must be applied is defined through configuration.
 
-<p align="center"><img src="https://informatievlaanderen.github.io/VSDS-Tech-Docs/assets/images/fragmentation.png" width="60%" text-align="center"></p>
+<p align="center"><img src="https://openldes.org/assets/assets/images/fragmentation.png" width="60%" text-align="center"></p>
 
 The fragmenting of a Linked Data Event Stream (LDES) is a crucial technique for managing and processing large amounts of data more efficiently. There are three main methods of fragmentation: **geospatial**, **time-based**, and **substring** fragmentation.
 
@@ -142,9 +142,9 @@ Substring fragmentation is currently no longer supported as a fragmentation opti
 
 #### Time-based fragmentation
 
-[Time-based fragmentation](https://github.com/Informatievlaanderen/VSDS-LDESServer4J/tree/main/ldes-fragmentisers/ldes-fragmentisers-timebased-hierarchical) has not yet been implemented.
+[Time-based fragmentation](https://github.com/OpenLDES/VSDS-LDESServer/tree/main/ldes-fragmentisers/ldes-fragmentisers-timebased-hierarchical) has not yet been implemented.
 
-<p align="center"><img src="https://informatievlaanderen.github.io/VSDS-Tech-Docs/assets/images/temporal.png" width="60%" text-align="center"></p>
+<p align="center"><img src="https://openldes.org/assets/assets/images/temporal.png" width="60%" text-align="center"></p>
 
 Example of a time-based fragmentation configuration file
 
@@ -175,9 +175,9 @@ next fragment is created with a new current timestamp.
 
 Consider the scenario where the address registry is published as an LDES that using partitioning. In such a case, data consumers are required to replicate the entire linear set of fragments, despite only being interested in a smaller subset of the dataset. For instance, the city of Brussels may only require addresses within its geographical region and is not interested in other addresses. However, with the partitioned LDES, they would need to iterate through all the fragments and filter the LDES members (address version objects) on the client-side. By utilising geospatial fragmentation, the data can be divided into smaller pieces (tiles) based on geographical location. This facilitates filtering on the fragment level (tiles) and allows for processing and analysis of data within specific geospatial tiles.
 
-<p align="center"><img src="https://informatievlaanderen.github.io/VSDS-Tech-Docs/assets/images/geospatial.png" width="60%" text-align="center"></p>
+<p align="center"><img src="https://openldes.org/assets/assets/images/geospatial.png" width="60%" text-align="center"></p>
 
-The geospatial fragmentation supported by the LDES server is based on the ["Slippy Maps" algorithm](https://wiki.openstreetmap.org/wiki/Slippy_map). The fragmentation expects a `zoom level` parameter which is used by the algorithm to divide the "world" into tiles. The number of tiles if $$2^{2n}$$ (where n = zoom level). The second expected parameter is an `RDF predicate`, indicating on which property of the LDES member the fragmentation should be applied. More information about the algorithm used to apply a geospatial fragmentation can be found [here](https://github.com/Informatievlaanderen/VSDS-LDESServer4J/tree/main/ldes-fragmentisers/ldes-fragmentisers-geospatial).
+The geospatial fragmentation supported by the LDES server is based on the ["Slippy Maps" algorithm](https://wiki.openstreetmap.org/wiki/Slippy_map). The fragmentation expects a `zoom level` parameter which is used by the algorithm to divide the "world" into tiles. The number of tiles if $$2^{2n}$$ (where n = zoom level). The second expected parameter is an `RDF predicate`, indicating on which property of the LDES member the fragmentation should be applied. More information about the algorithm used to apply a geospatial fragmentation can be found [here](https://github.com/OpenLDES/VSDS-LDESServer/tree/main/ldes-fragmentisers/ldes-fragmentisers-geospatial).
 
 The required configuration for this fragmentation is:
 
@@ -306,7 +306,7 @@ The LDES server typically adds an LDES member to the "lowest" possible fragment,
 
 A retention policydetermines how long data will be kept and stored. Its purpose is to ensure the efficient use of storage resources by controlling data growth over time. Setting a retention policy per view to minimise storage fill-up is possible.
 
-<p align="center"><img src="https://informatievlaanderen.github.io/VSDS-Tech-Docs/assets/images/retention_policy.png" width="60%" text-align="center"></p>
+<p align="center"><img src="https://openldes.org/assets/assets/images/retention_policy.png" width="60%" text-align="center"></p>
 
 Implementing a retention policy helps organisations maintain control over their data growth and ensure that storage resources are used optimally. The policy specifies the maximum duration that data should be kept.
 
@@ -394,14 +394,14 @@ The combination of Version-based and Time-based Retention offers an advanced sol
 
 ### Hosting the LDES stream SHACL shape
 
-SHACL (Shapes Constraint Language) is a language used to validate RDF graphs against a set of conditions provided as shapes and other constructs in an RDF graph. The LDES Server facilitates hosting a SHACL shape describing the members in the LDES. Through configuration, it is possible to [reference an existing SHACL shape](https://github.com/Informatievlaanderen/VSDS-LDESServer4J#example-http-ingest-fetch-configuration) via an URL or to provide a [static file](https://github.com/Informatievlaanderen/VSDS-LDESServer4J#example-serving-static-content) with an RDF description of the SHACL shape.
+SHACL (Shapes Constraint Language) is a language used to validate RDF graphs against a set of conditions provided as shapes and other constructs in an RDF graph. The LDES Server facilitates hosting a SHACL shape describing the members in the LDES. Through configuration, it is possible to [reference an existing SHACL shape](https://github.com/OpenLDES/VSDS-LDESServer#example-http-ingest-fetch-configuration) via an URL or to provide a [static file](https://github.com/OpenLDES/VSDS-LDESServer#example-serving-static-content) with an RDF description of the SHACL shape.
 
 ### Hosting DCAT metadata
 
 DCAT is a standardised RDF vocabulary to describe data catalogues on the Web, allowing easy interoperability between catalogues. Using a standard schema, DCAT enhances discoverability and facilitates federated search across multiple catalogues.
 
 The LDES server facilitates hosting DCAT metadata when publishing an LDES. Through configuration, as with the SHACL shape, it is possible to reference an existing DCAT via an URI or to provide a static file containing an RDF description of the DCAT.
-More information on configuring DCAT on the LDES Server can be found [here](https://github.com/Informatievlaanderen/VSDS-LDESServer4J#example-serving-dcat-metadata).
+More information on configuring DCAT on the LDES Server can be found [here](https://github.com/OpenLDES/VSDS-LDESServer#example-serving-dcat-metadata).
 
 #### Add DCAT configuration for the LDES server
 

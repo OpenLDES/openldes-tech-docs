@@ -6,7 +6,7 @@ title: RDF Adapter
 
 # RDF Adapter
 
-<b>LDIO Component Name:</b> <i>`Ldio:RdfAdapter`</i> see [reference guide](https://informatievlaanderen.github.io/VSDS-Linked-Data-Interactions/ldio/ldio-adapters/ldio-rdf-adapter) <br>
+<b>LDIO Component Name:</b> <i>`Ldio:RdfAdapter`</i> see [reference guide](https://openldes.github.io/Linked-Data-Interactions/ldio/ldio-adapters/ldio-rdf-adapter) <br>
 <b>Apache Nifi Component Name:</b> there is no Apache Nifi variant created within the frame of VSDS
 
 

@@ -5,7 +5,7 @@ nav_order: 6
 ---
 
 # Performance
-The [LDES Server](https://informatievlaanderen.github.io/VSDS-LDESServer4J/) and [LDIO Workbench](https://informatievlaanderen.github.io/VSDS-Linked-Data-Interactions/) are components for publishing data as LDES. They are available as [docker images](https://hub.docker.com/) that can be deployed locally or in the cloud using any container technology such as docker compose, kubernetes, or similar mechanism provided by cloud providers.
+The [LDES Server](https://openldes.github.io/LDESServer/) and [LDIO Workbench](https://openldes.github.io/Linked-Data-Interactions/) are components for publishing data as LDES. They are available as [docker images](https://hub.docker.com/) that can be deployed locally or in the cloud using any container technology such as docker compose, kubernetes, or similar mechanism provided by cloud providers.
 
 How you size the docker containers towards available CPU and memory impacts the performance of these components. Depending on your specific needs you will have to use more or less CPU and/or memory to alow your specific data sets to be ingested slower or faster into the LDES Server's database. Likewise, you need to balance these sizes for the amount of data you have and the number of clients that will be requesting this data. It is very difficult to predict the best sizes for CPU and memory usage in any particular case, especially if data sets are added or removed.
 
@@ -51,7 +51,7 @@ For a typical deployment environment we used a cloud environment where we had tw
 Some environments may not need the raw power or may even have a very tight budget. For that reason we also tested the performance on a Raspberry PI model 4 with 8GiB RAM (quad-core), deploying all services locally using docker compose.
 
 ### How? - Test Method
-To write and run the actual tests we used [JMeter](https://jmeter.apache.org/). In addition, we created and used a small management tool ([JMeter Runner](https://github.com/Informatievlaanderen/jmeter-runner)) to schedule tests, cancel or delete tests, follow up the running tests and view tests results.
+To write and run the actual tests we used [JMeter](https://jmeter.apache.org/). In addition, we created and used a small management tool ([JMeter Runner](https://github.com/OpenLDES/jmeter-runner)) to schedule tests, cancel or delete tests, follow up the running tests and view tests results.
 
 Each test ingests 100K members using a number of pipelines and partitions the data set using one or more views. A test produces a stats.xml file containing the base measurements in addition to the standard report generated automatically by JMeter. This stats.xml file allows us to capture and report measurements on the background (fragmentation) tasks as well.
 
@@ -62,10 +62,10 @@ We run the following tests in seven test runs to have a few statistical values, 
 * calculate ingest and fragmentation speed using a combination of 1, 2 & 4 pipelines vs. 1, 2 & 4 views (e.g. 2 pipelines towards 4 views) - parallel ingest & partitioning
 * calculate fetch speed using 10, 100, 250, 500, 1000, 2500, 5000 & 10000 members per page - no parsing/reading, measures only the fragment creation and retrieval
 
-The test definitions and the instructions to run these tests locally can be found [here](https://github.com/Informatievlaanderen/VSDS-LDES-performance-testing/tree/main/load-testing/server) while the docker compose file and related files can be found [one level up](https://github.com/Informatievlaanderen/VSDS-LDES-performance-testing/tree/main/load-testing).
+The test definitions and the instructions to run these tests locally can be found [here](https://github.com/OpenLDES/VSDS-LDES-performance-testing/tree/main/load-testing/server) while the docker compose file and related files can be found [one level up](https://github.com/OpenLDES/VSDS-LDES-performance-testing/tree/main/load-testing).
 
 ### Results
-All results show the average values of all test runs in members per second. For details we would like to refer you to [the results source](https://github.com/Informatievlaanderen/VSDS-LDES-performance-testing/blob/main/load-testing/server/results.xlsx). We have tested our reference image ([3.5.0](https://hub.docker.com/r/ldes/ldes-server/tags)) of the LDES Server.
+All results show the average values of all test runs in members per second. For details we would like to refer you to [the results source](https://github.com/OpenLDES/VSDS-LDES-performance-testing/blob/main/load-testing/server/results.xlsx). We have tested our reference image ([3.5.0](https://hub.docker.com/r/ldes/ldes-server/tags)) of the LDES Server.
 
 > **Note** that the low-end numbers are not yet available and may change the conclusions below.
 

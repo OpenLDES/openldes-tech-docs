@@ -38,7 +38,7 @@ def find_dead_links(base_url):
                             dead_links.add(href)
                             print('Dead link found:', href)
                         else:
-                            if "https://informatievlaanderen.github.io/VSDS-Tech-Docs/" in href:
+                            if "https://openldes.org/assets/" in href:
                                 crawl(href)
                     else:
                         print('Already visited:', href)
@@ -51,7 +51,7 @@ def find_dead_links(base_url):
     return dead_links
 
 # Replace this URL with the one you want to check
-base_url = "https://informatievlaanderen.github.io/VSDS-Tech-Docs/"
+base_url = "https://openldes.org/assets/"
 dead_links = find_dead_links(base_url)
 
 for link in dead_links:

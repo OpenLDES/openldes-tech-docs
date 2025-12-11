@@ -7,7 +7,7 @@ nav_order: 0
 
 # LDES Client
 
-<b>LDIO Component Name:</b> <i>`Ldio:LdioLdesClient`</i> see [reference guide](https://informatievlaanderen.github.io/VSDS-Linked-Data-Interactions/ldio/ldio-inputs/ldio-ldes-client) <br>
+<b>LDIO Component Name:</b> <i>`Ldio:LdioLdesClient`</i> see [reference guide](https://openldes.github.io/Linked-Data-Interactions/ldio/ldio-inputs/ldio-ldes-client) <br>
 <b>Apache Nifi Component Name:</b> <i>`Ldio:LdioLdesClient`</i> see [reference guide](https://s01.oss.sonatype.org/#nexus-search;gav~be.vlaanderen.informatievlaanderen.ldes.ldi.nifi~ldes-client-processor)
 
 <br>
@@ -37,15 +37,15 @@ graph LR
 
 <br>
 
-<p align="center"><img src="https://informatievlaanderen.github.io/VSDS-Tech-Docs/assets/images/LDES%20client.png" width="60%" text-align="center"></p>
+<p align="center"><img src="https://openldes.org/assets/assets/images/LDES%20client.png" width="60%" text-align="center"></p>
 
-The [LDES CLIENT](https://github.com/Informatievlaanderen/VSDS-Linked-Data-Interactions) is designed for replication and synchronisation, meaning the client can retrieve members of an LDES but also checks regularly if new members are added and fetch them, allowing data consumers to stay up to date with the dataset.
+The [LDES CLIENT](https://github.com/OpenLDES/VSDS-Linked-Data-Interactions) is designed for replication and synchronisation, meaning the client can retrieve members of an LDES but also checks regularly if new members are added and fetch them, allowing data consumers to stay up to date with the dataset.
 
 To understand the functioning of an LDES client, it is important to understand how LDESes are published on the Web. The [Linked Data Fragments](https://linkeddatafragments.org/specification/linked-data-fragments/) principle is utilised for publishing an LDES, meaning that the data is published in one or more fragments and meaningful semantic links are created between these fragments. This approach facilitates clients to follow these links and discover additional data. However, the critical aspect for the LDES client is the notion of mutable and immutable fragments. When publishing an LDES stream, a common configuration is to have a maximum number of members per fragment. Once a fragment surpasses this limit, it is regarded as immutable, and a **'Cache-control: immutable'** cache header is added to the fragment to signify this. This information is crucial for the LDES client since it only needs to retrieve an immutable fragment once, while mutable fragments must be regularly polled to identify new members.
 
 ## Linked Data Interactions
 
-The LDES client component is written in Java and available as an [SDK](https://github.com/Informatievlaanderen/VSDS-Linked-Data-Interactions/tree/main/ldi-core/ldes-client) in the Linked Data Interactions repository. More information about Linked Data Interactions can be found [here](https://informatievlaanderen.github.io/VSDS-Linked-Data-Interactions/).
+The LDES client component is written in Java and available as an [SDK](https://github.com/OpenLDES/VSDS-Linked-Data-Interactions/tree/main/ldi-core/ldes-client) in the Linked Data Interactions repository. More information about Linked Data Interactions can be found [here](https://openldes.github.io/Linked-Data-Interactions/).
 
 The LDES Client contains the functionality to replicate and synchornise an LDES, and to persist its state for that process.
 
