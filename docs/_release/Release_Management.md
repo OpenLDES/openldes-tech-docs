@@ -13,13 +13,13 @@ sort: 11
 * Latest Official version: [![Docker Image Version](https://img.shields.io/docker/v/ldes/ldes-server/latest)](https://hub.docker.com/r/ldes/ldes-server/tags)
 * Latest Alpha version: [![Docker Image Version](https://img.shields.io/docker/v/ldes/ldes-server)](https://hub.docker.com/r/ldes/ldes-server/tags)
 
-Go to the [LDES Server Github Releases](https://github.com/OpenLDES/VSDS-LDESServer/releases/) for all the releases.
+Go to the [LDES Server Github Releases](https://github.com/OpenLDES/LDESServer/releases/) for all the releases.
 
 ## Linked Data Interactions [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Informatievlaanderen_VSDS-Linked-Data-Interactions&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Informatievlaanderen_VSDS-Linked-Data-Interactions)
 
 The Linked Data Interactions Repo (LDI) is a bundle of basic SDKs used to receive, generate, transform and output Linked Data. This project is set up in the context of the VSDS Project to ease adopting LDES on data consumer and producer side.
 
-Go to the [LDI Github Releases](https://github.com/OpenLDES/VSDS-Linked-Data-Interactions/releases/) for all the releases.
+Go to the [LDI Github Releases](https://github.com/OpenLDES/Linked-Data-Interactions/releases/) for all the releases.
 
 ### Linked Data Interactions Orchestrator (LDIO) 
 

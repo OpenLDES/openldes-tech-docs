@@ -62,10 +62,10 @@ We run the following tests in seven test runs to have a few statistical values, 
 * calculate ingest and fragmentation speed using a combination of 1, 2 & 4 pipelines vs. 1, 2 & 4 views (e.g. 2 pipelines towards 4 views) - parallel ingest & partitioning
 * calculate fetch speed using 10, 100, 250, 500, 1000, 2500, 5000 & 10000 members per page - no parsing/reading, measures only the fragment creation and retrieval
 
-The test definitions and the instructions to run these tests locally can be found [here](https://github.com/OpenLDES/VSDS-LDES-performance-testing/tree/main/load-testing/server) while the docker compose file and related files can be found [one level up](https://github.com/OpenLDES/VSDS-LDES-performance-testing/tree/main/load-testing).
+The test definitions and the instructions to run these tests locally can be found [here](https://github.com/OpenLDES/LDES-performance-testing/tree/main/load-testing/server) while the docker compose file and related files can be found [one level up](https://github.com/OpenLDES/LDES-performance-testing/tree/main/load-testing).
 
 ### Results
-All results show the average values of all test runs in members per second. For details we would like to refer you to [the results source](https://github.com/OpenLDES/VSDS-LDES-performance-testing/blob/main/load-testing/server/results.xlsx). We have tested our reference image ([3.5.0](https://hub.docker.com/r/ldes/ldes-server/tags)) of the LDES Server.
+All results show the average values of all test runs in members per second. For details we would like to refer you to [the results source](https://github.com/OpenLDES/LDES-performance-testing/blob/main/load-testing/server/results.xlsx). We have tested our reference image ([3.5.0](https://hub.docker.com/r/ldes/ldes-server/tags)) of the LDES Server.
 
 > **Note** that the low-end numbers are not yet available and may change the conclusions below.
 

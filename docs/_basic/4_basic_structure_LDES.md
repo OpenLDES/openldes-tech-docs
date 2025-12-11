@@ -87,6 +87,6 @@ This example introduces the concept of **versions**, because certain entities, s
 In this example, the entity with HTTP URI `<streetname1>` is not longer immutable, which is a direct conflict with the definition of the LDES spec.
 
 {: .note}
-It is important to note that once a client processes a member of an LDES, it should never have to process it again. Therefore, a Linked Data Event Stream client can maintain a list of already processed member IRIs in a cache. A reference implementation of a client is available as an open-source [SDK](https://github.com/OpenLDES/VSDS-Linked-Data-Interactions/tree/main/ldi-core#1-ldes-client) as part of the Flanders Smart Data Space initiative.
+It is important to note that once a client processes a member of an LDES, it should never have to process it again. Therefore, a Linked Data Event Stream client can maintain a list of already processed member IRIs in a cache. A reference implementation of a client is available as an open-source [SDK](https://github.com/OpenLDES/Linked-Data-Interactions/tree/main/ldi-core#1-ldes-client) as part of the Flanders Smart Data Space initiative.
 
 <p align="center"><img src="https://openldes.org/assets/assets/images/versioning.png" width="60%" text-align="center"></p>

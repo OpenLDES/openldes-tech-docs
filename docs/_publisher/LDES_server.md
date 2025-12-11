@@ -9,7 +9,7 @@ nav_order: 5
 <b>LDIO Pipeline</b> <i></i> see [reference guide]() <br>
 <b>Apache Nifi Component Name:</b> <i>``</i> see [Apache Nifi reference guide]()
 
-The Linked Data Event Stream (LDES) [server](https://github.com/OpenLDES/VSDS-LDESServer) is a configurable component that can be used to ingest, store, and (re-)publish one or multiple Linked Data Event Stream(s). The open-source LDES server is built in the context of the [VSDS project](https://www.vlaanderen.be/vlaamse-smart-data-space-portaal) to exchange (Open) Data easily.
+The Linked Data Event Stream (LDES) [server](https://github.com/OpenLDES/LDESServer) is a configurable component that can be used to ingest, store, and (re-)publish one or multiple Linked Data Event Stream(s). The open-source LDES server is built in the context of the [VSDS project](https://www.vlaanderen.be/vlaamse-smart-data-space-portaal) to exchange (Open) Data easily.
 
 <p align="center"><img src="https://openldes.org/assets/assets/images/LDES%20server.png" width="60%" text-align="center"></p>
 
@@ -18,7 +18,7 @@ The server can be configured to meet the organisation's specific needs. Function
 ![](../images/scalableApplications.png)
 
 {: .note}
-The LDES server is available as on open-source building block on [GitHub](https://github.com/OpenLDES/VSDS-LDESServer)
+The LDES server is available as on open-source building block on [GitHub](https://github.com/OpenLDES/LDESServer)
 
 ## Setting up the LDES Server during startup process
 
@@ -78,7 +78,7 @@ SHACL stands for Shapes Constraint Language and is used to define a set of const
 
 The SHACL shape specifies the expected properties of an LDES members and the constraints that must be followed to ensure the LDES member adheres to the expected structure and semantics. It defines properties such as required properties, allowed property values, and the data types expected for the properties.
 
-More information on how to provide an RDF file, containing a SHACL shape, to the LDES server can be found [here](https://github.com/OpenLDES/VSDS-LDESServer#example-serving-static-content).
+More information on how to provide an RDF file, containing a SHACL shape, to the LDES server can be found [here](https://github.com/OpenLDES/LDESServer#example-serving-static-content).
 
 ### Fragmentation
 
@@ -142,7 +142,7 @@ Substring fragmentation is currently no longer supported as a fragmentation opti
 
 #### Time-based fragmentation
 
-[Time-based fragmentation](https://github.com/OpenLDES/VSDS-LDESServer/tree/main/ldes-fragmentisers/ldes-fragmentisers-timebased-hierarchical) has not yet been implemented.
+[Time-based fragmentation](https://github.com/OpenLDES/LDESServer/tree/main/ldes-fragmentisers/ldes-fragmentisers-timebased-hierarchical) has not yet been implemented.
 
 <p align="center"><img src="https://openldes.org/assets/assets/images/temporal.png" width="60%" text-align="center"></p>
 
@@ -177,7 +177,7 @@ Consider the scenario where the address registry is published as an LDES that us
 
 <p align="center"><img src="https://openldes.org/assets/assets/images/geospatial.png" width="60%" text-align="center"></p>
 
-The geospatial fragmentation supported by the LDES server is based on the ["Slippy Maps" algorithm](https://wiki.openstreetmap.org/wiki/Slippy_map). The fragmentation expects a `zoom level` parameter which is used by the algorithm to divide the "world" into tiles. The number of tiles if $$2^{2n}$$ (where n = zoom level). The second expected parameter is an `RDF predicate`, indicating on which property of the LDES member the fragmentation should be applied. More information about the algorithm used to apply a geospatial fragmentation can be found [here](https://github.com/OpenLDES/VSDS-LDESServer/tree/main/ldes-fragmentisers/ldes-fragmentisers-geospatial).
+The geospatial fragmentation supported by the LDES server is based on the ["Slippy Maps" algorithm](https://wiki.openstreetmap.org/wiki/Slippy_map). The fragmentation expects a `zoom level` parameter which is used by the algorithm to divide the "world" into tiles. The number of tiles if $$2^{2n}$$ (where n = zoom level). The second expected parameter is an `RDF predicate`, indicating on which property of the LDES member the fragmentation should be applied. More information about the algorithm used to apply a geospatial fragmentation can be found [here](https://github.com/OpenLDES/LDESServer/tree/main/ldes-fragmentisers/ldes-fragmentisers-geospatial).
 
 The required configuration for this fragmentation is:
 
@@ -394,14 +394,14 @@ The combination of Version-based and Time-based Retention offers an advanced sol
 
 ### Hosting the LDES stream SHACL shape
 
-SHACL (Shapes Constraint Language) is a language used to validate RDF graphs against a set of conditions provided as shapes and other constructs in an RDF graph. The LDES Server facilitates hosting a SHACL shape describing the members in the LDES. Through configuration, it is possible to [reference an existing SHACL shape](https://github.com/OpenLDES/VSDS-LDESServer#example-http-ingest-fetch-configuration) via an URL or to provide a [static file](https://github.com/OpenLDES/VSDS-LDESServer#example-serving-static-content) with an RDF description of the SHACL shape.
+SHACL (Shapes Constraint Language) is a language used to validate RDF graphs against a set of conditions provided as shapes and other constructs in an RDF graph. The LDES Server facilitates hosting a SHACL shape describing the members in the LDES. Through configuration, it is possible to [reference an existing SHACL shape](https://github.com/OpenLDES/LDESServer#example-http-ingest-fetch-configuration) via an URL or to provide a [static file](https://github.com/OpenLDES/LDESServer#example-serving-static-content) with an RDF description of the SHACL shape.
 
 ### Hosting DCAT metadata
 
 DCAT is a standardised RDF vocabulary to describe data catalogues on the Web, allowing easy interoperability between catalogues. Using a standard schema, DCAT enhances discoverability and facilitates federated search across multiple catalogues.
 
 The LDES server facilitates hosting DCAT metadata when publishing an LDES. Through configuration, as with the SHACL shape, it is possible to reference an existing DCAT via an URI or to provide a static file containing an RDF description of the DCAT.
-More information on configuring DCAT on the LDES Server can be found [here](https://github.com/OpenLDES/VSDS-LDESServer#example-serving-dcat-metadata).
+More information on configuring DCAT on the LDES Server can be found [here](https://github.com/OpenLDES/LDESServer#example-serving-dcat-metadata).
 
 #### Add DCAT configuration for the LDES server
 
