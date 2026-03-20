@@ -6,7 +6,7 @@ title: Version Materializer
 
 # Version Materializer
 
-<b>LDIO Component Name:</b> <i>`Ldio:VersionMaterialiser`</i> see [reference guide](https://openldes.github.io/Linked-Data-Interactions/ldio/ldio-transformers/ldio-version-materializer) <br>
+<b>LDIO Component Name:</b> <i>`Ldio:VersionMaterialiser`</i> see [reference guide](https://openldes.github.io/Linked-Data-Interactions/latest/ldio/ldio-transformers/ldio-version-materializer) <br>
 <b>Apache Nifi Component Name:</b> <i>`VersionMaterialiser`</i> see [reference guide](https://s01.oss.sonatype.org/#nexus-search;gav~org.openldes.ldi.nifi~version-materialisation-processor)
 
 

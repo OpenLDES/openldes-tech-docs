@@ -6,7 +6,7 @@ title: Json To JsonLd Transformer
 
 # Json To JsonLd Transformer
 
-<b>LDIO Component Name:</b> <i>`Ldio:JsonToLdAdapter`</i> see [reference guide](https://openldes.github.io/Linked-Data-Interactions/ldio/ldio-adapters/ldio-json-to-json-ld) <br>
+<b>LDIO Component Name:</b> <i>`Ldio:JsonToLdAdapter`</i> see [reference guide](https://openldes.github.io/Linked-Data-Interactions/latest/ldio/ldio-adapters/ldio-json-to-json-ld) <br>
 <b>Apache Nifi Component Name:</b> <i>`
 Json to Json LD Processor` </i> see [reference guide](https://s01.oss.sonatype.org/#nexus-search;gav~org.openldes.ldi.nifi~json-to-ld-processor)
 

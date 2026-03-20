@@ -5,7 +5,7 @@ nav_order: 6
 ---
 
 # Performance
-The [LDES Server](https://openldes.github.io/LDESServer/) and [LDIO Workbench](https://openldes.github.io/Linked-Data-Interactions/) are components for publishing data as LDES. They are available as [docker images](https://hub.docker.com/) that can be deployed locally or in the cloud using any container technology such as docker compose, kubernetes, or similar mechanism provided by cloud providers.
+The [LDES Server](https://openldes.github.io/LDESServer/) and [LDIO Workbench](https://openldes.github.io/Linked-Data-Interactions/) are components for publishing data as LDES. They are available as [docker images](https://hub.docker.com/u/openldes) that can be deployed locally or in the cloud using any container technology such as docker compose, kubernetes, or similar mechanism provided by cloud providers.
 
 How you size the docker containers towards available CPU and memory impacts the performance of these components. Depending on your specific needs you will have to use more or less CPU and/or memory to alow your specific data sets to be ingested slower or faster into the LDES Server's database. Likewise, you need to balance these sizes for the amount of data you have and the number of clients that will be requesting this data. It is very difficult to predict the best sizes for CPU and memory usage in any particular case, especially if data sets are added or removed.
 

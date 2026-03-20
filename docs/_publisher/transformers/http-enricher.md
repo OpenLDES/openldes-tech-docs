@@ -6,7 +6,7 @@ title: Http Enricher Transformer
 
 # Http Enricher
 
-<b>LDIO Component Name:</b> <i>`Ldio:HttpEnricher`</i> see [reference guide](https://openldes.github.io/Linked-Data-Interactions/ldio/ldio-transformers/ldio-http-enricher) <br>
+<b>LDIO Component Name:</b> <i>`Ldio:HttpEnricher`</i> see [reference guide](https://openldes.github.io/Linked-Data-Interactions/latest/ldio/ldio-transformers/ldio-http-enricher) <br>
 <b>Apache Nifi Component Name:</b> <i>`...`</i> see [reference guide]()
 
 <br>

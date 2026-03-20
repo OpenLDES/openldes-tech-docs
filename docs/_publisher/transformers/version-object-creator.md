@@ -7,7 +7,7 @@ title: Version Object Creator
 
 # Version Object Creator
 
-<b>LDIO Component Name:</b> <i>`Ldio:VersionObjectCreator`</i> see [reference guide](https://openldes.github.io/Linked-Data-Interactions/ldio/ldio-transformers/ldio-version-object-creator) <br>
+<b>LDIO Component Name:</b> <i>`Ldio:VersionObjectCreator`</i> see [reference guide](https://openldes.github.io/Linked-Data-Interactions/latest/ldio/ldio-transformers/ldio-version-object-creator) <br>
 <b>Apache Nifi Component Name:</b> <i>`VersionObjectCreator`</i> see [reference guide](https://s01.oss.sonatype.org/#nexus-search;gav~org.openldes.ldi.nifi~create-version-object-processor)
 
 The Version Object Creator will transform a State Object to a Version Object.
