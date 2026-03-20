@@ -6,8 +6,8 @@ title: RDF Adapter
 
 # RDF Adapter
 
-<b>LDIO Component Name:</b> <i>`Ldio:RdfAdapter`</i> see [reference guide](https://openldes.github.io/Linked-Data-Interactions/ldio/ldio-adapters/ldio-rdf-adapter) <br>
-<b>Apache Nifi Component Name:</b> there is no Apache Nifi variant created within the frame of VSDS
+<b>LDIO Component Name:</b> <i>`Ldio:RdfAdapter`</i> see [reference guide](https://openldes.github.io/Linked-Data-Interactions/latest/ldio/ldio-adapters/ldio-rdf-adapter) <br>
+<b>Apache Nifi Component Name:</b> there is no Apache Nifi variant created within the frame of OpenLDES
 
 
 As the most basic Adapter of the LDI Core Building Blocks, the RDF Adapter will take in an RDF string and convert it 

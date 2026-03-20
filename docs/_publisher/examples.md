@@ -12,7 +12,7 @@ Apache Kafka, Fiware-Orien Context Broker, and MQTT can be used in the publishin
 
 ## Kafka to LDES server
 
-Apache Kafka can be used as a data provider for ingesting data topics into the LDES ecosystem. The diagram below illustrates how the VSDS NIFI solution subscribes to a Kafka stream, updates the dataset's attributes, converts it into an LDES-formatted stream, and uses HTTP protocols to publish it to the LDES Server. This process enables fragmentation or pagination of the data.
+Apache Kafka can be used as a data provider for ingesting data topics into the LDES ecosystem. The diagram below illustrates how the OpenLDES NIFI solution subscribes to a Kafka stream, updates the dataset's attributes, converts it into an LDES-formatted stream, and uses HTTP protocols to publish it to the LDES Server. This process enables fragmentation or pagination of the data.
 
 <p align="center"><img src="/images/Kafka_onboarding.png"  width="60%" text-align="center"></p>
 
@@ -40,12 +40,12 @@ Please follow [README.md](https://github.com/OpenLDES/LDES-E2E-testing/tree/d45e
 
 ## Fiware to LDES server
 
-The FIWARE-Orion Context Broker (OCB) can be integrated as a data provider with the VSDS LDES (Linked Data Event Streams) Server. The OCB is an open-source software component developed by FIWARE that can manage real-time context information by receiving updates from IoT devices, sensors, and other sources and storing this information in a centralized location.
+The FIWARE-Orion Context Broker (OCB) can be integrated as a data provider with the OpenLDES LDES (Linked Data Event Streams) Server. The OCB is an open-source software component developed by FIWARE that can manage real-time context information by receiving updates from IoT devices, sensors, and other sources and storing this information in a centralized location.
 
 One example of this integration is demonstrated in the diagram below, which illustrates the use case of onboarding the Internet of Water (VMM) data.
 
 <p align="center"><img src="/images/orion_onboarding_iow.png"  width="70%" text-align="center"></p>
 
-In this case, the OCB is integrated into the LDES ecosystem to publish context updates to an LDES stream. The VSDS NIFI solution is used to translate the context data into LDES events and publish them to the LDES stream via an update attributes processor, an OSLO converter processor, and an LdesConverter process NIFI pipeline.
+In this case, the OCB is integrated into the LDES ecosystem to publish context updates to an LDES stream. The OpenLDES NIFI solution is used to translate the context data into LDES events and publish them to the LDES stream via an update attributes processor, an OSLO converter processor, and an LdesConverter process NIFI pipeline.
 
 Once the context updates are published to the LDES Sever in LDES formatted stream, they can be processed and stored in the LDES Server as linked data. This makes the context information available for further analysis and uses in other systems.

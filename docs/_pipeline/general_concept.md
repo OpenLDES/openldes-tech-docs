@@ -13,7 +13,7 @@ To either publish your data with or access data from the Flanders Smart Data Spa
 
 ## Publisher pipeline
 
-Are you a <b>data publisher</b> that wants to publish your data in the Flanders Smart Data Space as a Linked Data Event Stream (LDES)? In that case, it is necessary to configure a <b>publishing pipeline</b>. For instance, when a data publisher aims to distribute non-linked data as an LDES, a specifically configured publisher pipeline manages the entire process. Initially, an adapter component transforms the data into linked data. Subsequently, a transformer component converts the geometry into WKT format. Once the data is prepared for publication, it is transmitted to the LDES server using an HTTP-out component. It's important to note that the LDES server is not part of the pipeline; rather, it functions as a separate VSDS building block. For effective data publication, two services need to be deployed.
+Are you a <b>data publisher</b> that wants to publish your data in the Flanders Smart Data Space as a Linked Data Event Stream (LDES)? In that case, it is necessary to configure a <b>publishing pipeline</b>. For instance, when a data publisher aims to distribute non-linked data as an LDES, a specifically configured publisher pipeline manages the entire process. Initially, an adapter component transforms the data into linked data. Subsequently, a transformer component converts the geometry into WKT format. Once the data is prepared for publication, it is transmitted to the LDES server using an HTTP-out component. It's important to note that the LDES server is not part of the pipeline; rather, it functions as a separate OpenLDES building block. For effective data publication, two services need to be deployed.
 
 ![alt text](image.png)
 

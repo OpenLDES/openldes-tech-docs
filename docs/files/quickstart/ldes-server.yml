@@ -1,5 +1,5 @@
 mongock:
-    migration-scan-package: VSDS
+    migration-scan-package: OpenLDES
 springdoc:
     swagger-ui:
         path: /v1/swagger

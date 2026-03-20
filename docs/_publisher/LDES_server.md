@@ -9,7 +9,7 @@ nav_order: 5
 <b>LDIO Pipeline</b> <i></i> see [reference guide]() <br>
 <b>Apache Nifi Component Name:</b> <i>``</i> see [Apache Nifi reference guide]()
 
-The Linked Data Event Stream (LDES) [server](https://github.com/OpenLDES/LDESServer) is a configurable component that can be used to ingest, store, and (re-)publish one or multiple Linked Data Event Stream(s). The open-source LDES server is built in the context of the [VSDS project](https://www.vlaanderen.be/vlaamse-smart-data-space-portaal) to exchange (Open) Data easily.
+The Linked Data Event Stream (LDES) [server](https://github.com/OpenLDES/LDESServer) is a configurable component that can be used to ingest, store, and (re-)publish one or multiple Linked Data Event Stream(s). The open-source LDES server is built in the context of the [OpenLDES project](https://openldes.org) to exchange (Open) Data easily.
 
 <p align="center"><img src="https://openldes.org/assets/assets/images/LDES%20server.png" width="60%" text-align="center"></p>
 
@@ -434,7 +434,7 @@ To start a default LDES Server, a few basic steps are needed.
 
 ```yaml
 mongock:
-  migration-scan-package: VSDS
+  migration-scan-package: OpenLDES
 springdoc:
   swagger-ui:
     path: /v1/swagger
